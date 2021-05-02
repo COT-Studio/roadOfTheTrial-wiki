@@ -1,0 +1,74 @@
+body {
+    margin: 0px;
+}
+
+#header {
+    background-color: rgb(100,200,100);
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+}
+
+#main {
+    width: 100%;
+    margin: 20px;
+    margin-right: 35px;
+}
+
+#footer {
+    background-color: #999;
+    width: 100%;
+    height: 40px;
+}
+
+#section {
+    margin: 25px;
+    min-height: 700px;
+}
+
+h1 {
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+    clear: both;
+}
+
+a:link, a:visited {
+    color: rgb(10, 100, 30);
+}
+
+a:hover, a:active {
+    color: rgb(70,230,90);
+}
+
+#title {
+    font-size: 40px;
+    color: #444;
+}
+
+p.tips {
+    text-align: center;
+    font-size: 15px;
+}
+
+p {
+    font-size: 18px;
+}
+
+#info {
+    background-color: #eee;
+    width: 250px;
+    border: 4px double grey;
+    border-radius: 20px;
+    margin: 50px;
+    float: right;
+}
+
+ul {
+    list-style-type: none;
+    padding: 5px;
+}
+
+li {
+    text-align: center;
+    font-size: large;
+}

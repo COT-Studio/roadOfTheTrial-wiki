@@ -1,0 +1,45 @@
+body {
+    margin: 0px;
+}
+
+#header {
+    background-color: rgb(100,200,100);
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+}
+
+#main {
+    width: 100%;
+    margin: 20px;
+    min-height: 750px;
+}
+
+#footer {
+    background-color: #999;
+    width: 100%;
+    height: 40px;
+    top: 100%;
+}
+
+p.tips {
+    text-align: center;
+    font-size: 15px;
+}
+
+p {
+    font-size: 18px;
+}
+
+h1 {
+    text-align: center;
+    border-bottom: 2px solid #ccc
+}
+
+a:link, a:visited {
+    color: rgb(20, 120, 30);
+}
+
+a:hover, a:active {
+    color: rgb(60,220,90);
+}
