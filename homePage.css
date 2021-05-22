@@ -2,6 +2,10 @@ body {
     margin: 0px;
 }
 
+#logo {
+    width: 100%;
+}
+
 #header {
     background-color: rgb(100,200,100);
     width: 100%;
