@@ -62,7 +62,11 @@ var sml = {
     },//parse()
     
     wikify:function() {
+        console.log("开始运行sml");
         var e = document.getElementById("section");
         e.innerHTML = this.parse(e.innerHTML);
+        console.log("运行完毕")
     }
 }//sml
+
+console.log("SML.js已载入")
