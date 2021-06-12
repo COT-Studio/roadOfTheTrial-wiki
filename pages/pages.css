@@ -29,7 +29,7 @@ body {
     min-height: 700px;
 }
 
-h1 {
+h1,h2 {
     text-align: center;
     border-bottom: 2px solid #ccc;
     clear: both;
@@ -59,19 +59,22 @@ p {
 
 #info {
     background-color: #eee;
-    width: 250px;
+    width: 200px;
     border: 4px double grey;
     border-radius: 20px;
     margin: 50px;
+    padding-left: 40px;
     float: right;
 }
 
 ul {
-    list-style-type: none;
     padding: 5px;
 }
 
+ul.info {
+    list-style-type: none;
+}
+
 li {
-    text-align: center;
     font-size: large;
 }

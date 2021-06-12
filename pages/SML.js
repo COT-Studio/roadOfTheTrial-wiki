@@ -4,7 +4,7 @@ var sml = {
         for(i = 0;i <= str.length;i++) {
             x = str[i];
             switch(x) {
-                case "#"://标题<h1>
+                case "#"://标题<h2>
                     var id = "";//元素id
                     var inner = "";//元素内容
                     i++;
@@ -12,7 +12,7 @@ var sml = {
                     i += 5;
                     for (; str[i] != "#"; i++) {id += str[i]};
                     i++;
-                    r += '<h1 id="' + id + '">' + inner + '</h1>';
+                    r += '<h2 id="' + id + '">' + inner + '</h2>';
                 break;
                 case "["://图像<img>
                     var src = "";//路径
@@ -31,12 +31,12 @@ var sml = {
                     var inner = "";//元素内容
                     i++;
                     for (; str[i] != "-"; i++) {
-                        if (str[i] === "/") {//斜体字
+                        if (str[i] === "/") {//斜体字<i>
                             i++;
                             inner += "<i>";
                             for (; str[i] != "/"; i++) {inner += str[i]};
                             inner += "</i>";
-                        } else if (str[i] === "_") {//粗体字
+                        } else if (str[i] === "_") {//粗体字<b>
                             i++;
                             inner += "<b>";
                             for (; str[i] != "_"; i++) {inner += str[i]};
@@ -55,6 +55,44 @@ var sml = {
                     };
                     i++;
                     r += '<p>' + inner + '</p>';
+                break;
+                case "*"://列表<ul>
+                    var inner = "";//元素内容
+                    i++;
+                    for (; str[i] != "*"; i++) {
+                        if (str[i] === "-") {//列表项<li>
+                            i++;
+                            inner += "<li>";
+                            for (; str[i] != "-"; i++) {
+                                if (str[i] === "/") {//斜体字<i>
+                                    i++;
+                                    inner += "<i>";
+                                    for (; str[i] != "/"; i++) {inner += str[i]};
+                                    inner += "</i>";
+                                } else if (str[i] === "_") {//粗体字<b>
+                                    i++;
+                                    inner += "<b>";
+                                    for (; str[i] != "_"; i++) {inner += str[i]};
+                                    inner += "</b>";
+                                } else if (str[i] === "{") {
+                                    var href = "";//目标
+                                    var ainner = "";//<a>的元素内容
+                                    i++;
+                                    for (; str[i] != "&"; i++) {ainner += str[i]};
+                                    i += 5;
+                                    for (; str[i] != "}"; i++) {href += str[i]};
+                                    inner += '<a href="' + href + '">' + ainner + '</a>';
+                                } else {
+                                    inner += str[i];
+                                }
+                            };
+                            inner += "</li>";
+                        } else {
+                            inner += str[i];
+                        }
+                    };
+                    i++;
+                    r += '<ul>' + inner + '</ul>';
                 break;
             }//switch
         };//for
