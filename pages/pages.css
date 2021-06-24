@@ -13,6 +13,10 @@ body {
     padding: 10px;
 }
 
+#logo {
+    width: 100%;
+}
+
 #main {
     width: 100%;
     margin: 10px;
@@ -62,9 +66,15 @@ p {
     width: 200px;
     border: 4px double grey;
     border-radius: 20px;
-    margin: 50px;
     padding-left: 40px;
-    float: right;
+    margin: auto;
+}
+
+@media screen and (min-width: 720px) {
+    #info {
+        float: right;
+        margin: 50px;
+    }
 }
 
 ul {
