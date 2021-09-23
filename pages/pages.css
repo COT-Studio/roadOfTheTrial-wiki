@@ -82,7 +82,7 @@ ul {
 }
 
 ul.info {
-    list-style-type: none;
+    list-style-type: circle;
 }
 
 li {
